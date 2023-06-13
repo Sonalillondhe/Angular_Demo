@@ -1,0 +1,23 @@
+<div class="container-md3">
+<table class="table border mt-3 m-3 w-75">
+    <thead>
+      <tr>
+        <th scope="col">Product ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Price</th>
+        <th scope="col">Ratings</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ProductList" [ngClass]="{'active':item.id == previousSelProductId}">
+        <th>{{item.id}}</th>
+        <td><a [routerLink] ="['/ProductDetails',item.id,item.price]" >{{item.title}}</a> </td>
+        <!-- <td><a class="text-center" (click)=productrouting(item.id)>{{item.title}}</a> </td> -->
+        <td>{{item.brand}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.rating}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,5 @@
+<p>product-details works!</p>
+
+<h3>Selected Product Id : {{selectedProductId}}</h3>
+<h3>Price is: {{price}}</h3>
+<button class="btn btn-primary" routerLink="/ProductList" [queryParams]="{'selectProductId':selectedProductId,'ProductPrice':price}" >Back to List </button>
